@@ -1,0 +1,364 @@
+/* Shared page styles */
+.section {
+  background: var(--white);
+}
+
+.sectionAlt {
+  background: var(--bg-section);
+}
+
+.sectionDark {
+  background: var(--bg-dark);
+}
+
+.twoCol {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: start;
+}
+
+.centeredHeader {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.centeredHeader .section-subtitle {
+  margin: 12px auto 0;
+}
+
+.body {
+  font-size: 1rem;
+  color: var(--text-mid);
+  line-height: 1.75;
+  margin-bottom: 16px;
+}
+
+/* ── Values card ── */
+.valuesCard {
+  background: var(--bg-dark);
+  border-radius: var(--radius-lg);
+  padding: 36px;
+  border: 1px solid rgba(118, 255, 3, 0.15);
+}
+
+.valuesTitle {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--white);
+  margin-bottom: 24px;
+}
+
+.valueItem {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.8);
+  font-family: var(--font-heading);
+  font-weight: 600;
+}
+
+.valueItem:last-child {
+  border-bottom: none;
+}
+
+.valueDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--green-neon);
+  flex-shrink: 0;
+}
+
+/* ── Timeline ── */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  position: relative;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--green-neon), rgba(118, 255, 3, 0.1));
+  transform: translateX(-50%);
+}
+
+.timelineItem {
+  display: flex;
+  margin-bottom: 32px;
+}
+
+.timelineItem.left {
+  justify-content: flex-end;
+  padding-right: calc(50% + 28px);
+}
+
+.timelineItem.right {
+  justify-content: flex-start;
+  padding-left: calc(50% + 28px);
+}
+
+.timelineCard {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  min-width: 200px;
+  box-shadow: var(--card-shadow);
+}
+
+.timelineYear {
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  font-weight: 900;
+  color: var(--green-dark);
+  display: block;
+  margin-bottom: 6px;
+}
+
+.timelineEvent {
+  font-size: 0.9rem;
+  color: var(--text-mid);
+  line-height: 1.5;
+}
+
+/* ── Info cards ── */
+.infoGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 48px;
+}
+
+.infoCard {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  text-align: center;
+  box-shadow: var(--card-shadow);
+}
+
+.infoIcon {
+  font-size: 2.5rem;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.infoTitle {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--text-dark);
+  margin-bottom: 8px;
+}
+
+.infoDesc {
+  font-size: 0.88rem;
+  color: var(--text-mid);
+  line-height: 1.6;
+}
+
+/* ── Contact form ── */
+.formCard {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 48px;
+  box-shadow: var(--card-shadow-hover);
+  border: 1px solid var(--border);
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.formTitle {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--text-dark);
+  margin-bottom: 8px;
+}
+
+.formSubtitle {
+  font-size: 0.95rem;
+  color: var(--text-mid);
+  margin-bottom: 32px;
+}
+
+.formGroup {
+  margin-bottom: 20px;
+}
+
+.formLabel {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-dark);
+  margin-bottom: 8px;
+}
+
+.formInput,
+.formTextarea,
+.formSelect {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid var(--border);
+  border-radius: var(--radius);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--text-dark);
+  background: var(--white);
+  transition: border-color var(--transition);
+  outline: none;
+}
+
+.formInput:focus,
+.formTextarea:focus,
+.formSelect:focus {
+  border-color: var(--green-dark);
+}
+
+.formTextarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+/* ── Calendar ── */
+.calendarList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.calendarItem {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+  box-shadow: var(--card-shadow);
+  transition: box-shadow var(--transition), transform var(--transition);
+}
+
+.calendarItem:hover {
+  box-shadow: var(--card-shadow-hover);
+  transform: translateY(-2px);
+}
+
+.calDate {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 56px;
+  background: var(--bg-dark);
+  border-radius: var(--radius);
+  padding: 10px 8px;
+  color: var(--white);
+}
+
+.calDay {
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: var(--green-neon);
+  line-height: 1;
+}
+
+.calMonth {
+  font-family: var(--font-heading);
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: 2px;
+}
+
+.calBody {
+  flex: 1;
+}
+
+.calTitle {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 4px;
+}
+
+.calLocation {
+  font-size: 0.85rem;
+  color: var(--text-light);
+  margin-bottom: 6px;
+}
+
+.calType {
+  display: inline-block;
+  font-family: var(--font-heading);
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  background: rgba(27, 94, 32, 0.1);
+  color: var(--green-dark);
+  padding: 3px 10px;
+  border-radius: 99px;
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .twoCol {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .timeline::before {
+    left: 20px;
+  }
+
+  .timelineItem.left,
+  .timelineItem.right {
+    justify-content: flex-start;
+    padding-left: 52px;
+    padding-right: 0;
+  }
+
+  .infoGrid {
+    grid-template-columns: 1fr;
+    max-width: 420px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .formRow {
+    grid-template-columns: 1fr;
+  }
+
+  .formCard {
+    padding: 32px 24px;
+  }
+}

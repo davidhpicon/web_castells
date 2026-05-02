@@ -1,0 +1,108 @@
+.section {
+  background: var(--white);
+  padding: 80px 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* ── Card base (sobre fondo blanco) ── */
+.card {
+  background: var(--bg-section);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 36px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: box-shadow var(--transition), border-color var(--transition), transform var(--transition), background var(--transition);
+  text-decoration: none;
+  box-shadow: var(--card-shadow);
+}
+
+.card:hover {
+  background: var(--white);
+  border-color: rgba(118, 255, 3, 0.4);
+  box-shadow: var(--card-shadow-hover);
+  transform: translateY(-4px);
+}
+
+/* ── Accent card (verde neón) ── */
+.card.accent {
+  background: var(--bg-dark);
+  border-color: var(--bg-dark);
+  box-shadow: 0 4px 24px rgba(13, 26, 13, 0.18);
+}
+
+.card.accent:hover {
+  background: var(--green-darker);
+  border-color: var(--green-neon);
+  box-shadow: 0 8px 32px rgba(118, 255, 3, 0.2);
+  transform: translateY(-4px);
+}
+
+.icon {
+  font-size: 2.2rem;
+  line-height: 1;
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--text-dark);
+  line-height: 1.2;
+}
+
+.card.accent .title {
+  color: var(--white);
+}
+
+.desc {
+  font-size: 0.9rem;
+  color: var(--text-mid);
+  line-height: 1.65;
+  flex: 1;
+}
+
+.card.accent .desc {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-heading);
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--green-dark);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-top: 8px;
+  transition: gap var(--transition), color var(--transition);
+}
+
+.card.accent .cta {
+  color: var(--green-neon);
+}
+
+.card:hover .cta {
+  gap: 12px;
+  color: var(--green-dark);
+}
+
+.card.accent:hover .cta {
+  color: var(--green-neon);
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+}
