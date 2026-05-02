@@ -29,17 +29,16 @@ export default function Leadership() {
           </p>
         </div>
 
-        <div ref={gridRef} className={styles.grid}>
+        <div ref={gridRef} className="row g-4 justify-content-center">
           {members.map((m, i) => (
-            <div
-              key={m.role}
-              className={`${styles.card} reveal ${stagger[i]} ${gridInView ? 'is-visible' : ''}`}
-            >
-              <div className={styles.avatar}>
-                <span>{m.initials}</span>
+            <div key={m.role} className="col-6 col-md-3">
+              <div className={`${styles.card} reveal ${stagger[i]} ${gridInView ? 'is-visible' : ''}`}>
+                <div className={styles.avatar}>
+                  <span>{m.initials}</span>
+                </div>
+                <span className={styles.role}>{m.role}</span>
+                <span className={styles.name}>{m.name}</span>
               </div>
-              <span className={styles.role}>{m.role}</span>
-              <span className={styles.name}>{m.name}</span>
             </div>
           ))}
         </div>

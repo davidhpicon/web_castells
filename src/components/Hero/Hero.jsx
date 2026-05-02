@@ -10,7 +10,7 @@ const imageModules = import.meta.glob(
 )
 const images = Object.values(imageModules).map((m) => m.default)
 
-const AUTOPLAY_DELAY = 5000
+const AUTOPLAY_DELAY = 4000
 
 export default function Hero() {
   const gradientRef = useParallax(0.35)

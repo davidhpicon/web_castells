@@ -6,16 +6,16 @@ const navGroups = [
     title: 'La Colla',
     links: [
       { to: '/la-colla', label: 'Qui som?' },
-      { to: '/la-colla#historia', label: 'Història' },
-      { to: '/la-colla#junta', label: 'Junta directiva' },
-      { to: '/la-colla#resultats', label: 'Resultats' },
+      { to: '/la-colla', label: 'Història' },
+      { to: '/la-colla', label: 'Junta directiva' },
+      { to: '/la-colla', label: 'Resultats' },
     ],
   },
   {
     title: 'Participa',
     links: [
       { to: '/vine-a-fer-castells', label: 'Vine a fer castells' },
-      { to: '/vine-a-fer-castells#assajos', label: 'Assajos' },
+      { to: '/vine-a-fer-castells', label: 'Assajos' },
       { to: '/calendari', label: 'Calendari' },
       { to: '/contacte', label: 'Contacte' },
     ],
@@ -41,45 +41,49 @@ export default function Footer() {
   return (
     <footer className={styles.footer}>
       <div className="container">
-        <div className={styles.top}>
-          <div className={styles.brand}>
-            <div className={styles.logo}>
-              <span className={styles.logoIcon}>CdV</span>
-              <div>
-                <span className={styles.logoName}>Castellers de Viladecans</span>
-                <span className={styles.logoTagline}>Tradició · Esforç · Germanor</span>
+        <div className={`row gy-5 ${styles.top}`}>
+          <div className="col-12 col-lg-4">
+            <div className={styles.brand}>
+              <div className={styles.logo}>
+                <span className={styles.logoIcon}>CdV</span>
+                <div>
+                  <span className={styles.logoName}>Castellers de Viladecans</span>
+                  <span className={styles.logoTagline}>Tradició · Esforç · Germanor</span>
+                </div>
               </div>
-            </div>
-            <p className={styles.brandDesc}>
-              Som la colla castellera de Viladecans, al Baix Llobregat.
-              Des de fa més de 30 anys construïm castells i comunitat.
-            </p>
-            <div className={styles.socials}>
-              {socials.map((s) => (
-                <a
-                  key={s.label}
-                  href={s.href}
-                  className={styles.socialBtn}
-                  aria-label={s.label}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {s.icon}
-                </a>
-              ))}
+              <p className={styles.brandDesc}>
+                Som la colla castellera de Viladecans, al Baix Llobregat.
+                Des de fa més de 30 anys construïm castells i comunitat.
+              </p>
+              <div className={styles.socials}>
+                {socials.map((s) => (
+                  <a
+                    key={s.label}
+                    href={s.href}
+                    className={styles.socialBtn}
+                    aria-label={s.label}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {s.icon}
+                  </a>
+                ))}
+              </div>
             </div>
           </div>
 
           {navGroups.map((group) => (
-            <div key={group.title} className={styles.linkGroup}>
-              <h4 className={styles.groupTitle}>{group.title}</h4>
-              <ul>
-                {group.links.map((l) => (
-                  <li key={l.label}>
-                    <Link to={l.to} className={styles.footerLink}>{l.label}</Link>
-                  </li>
-                ))}
-              </ul>
+            <div key={group.title} className="col-6 col-sm-4 col-lg-2 offset-lg-0">
+              <div className={styles.linkGroup}>
+                <h4 className={styles.groupTitle}>{group.title}</h4>
+                <ul>
+                  {group.links.map((l) => (
+                    <li key={l.label}>
+                      <Link to={l.to} className={styles.footerLink}>{l.label}</Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           ))}
         </div>
@@ -99,9 +103,7 @@ export default function Footer() {
 
         <div className={styles.bottom}>
           <p>© {new Date().getFullYear()} Castellers de Viladecans. Tots els drets reservats.</p>
-          <p className={styles.bottomRight}>
-            Construïm castells, construïm comunitat. 💚
-          </p>
+          <p className={styles.bottomRight}>Construïm castells, construïm comunitat. 💚</p>
         </div>
       </div>
     </footer>

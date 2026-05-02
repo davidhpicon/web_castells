@@ -37,23 +37,24 @@ export default function CTACards() {
   return (
     <section className={styles.section}>
       <div className="container">
-        <div ref={gridRef} className={styles.grid}>
+        <div ref={gridRef} className="row g-4">
           {cards.map((card, i) => (
-            <Link
-              key={card.title}
-              to={card.link}
-              className={`${styles.card} ${card.accent ? styles.accent : ''} reveal ${stagger[i]} ${inView ? 'is-visible' : ''}`}
-            >
-              <span className={styles.icon} aria-hidden="true">{card.icon}</span>
-              <h3 className={styles.title}>{card.title}</h3>
-              <p className={styles.desc}>{card.desc}</p>
-              <span className={styles.cta}>
-                {card.cta}
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-                  <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              </span>
-            </Link>
+            <div key={card.title} className="col-12 col-md-4">
+              <Link
+                to={card.link}
+                className={`${styles.card} ${card.accent ? styles.accent : ''} reveal ${stagger[i]} ${inView ? 'is-visible' : ''} h-100`}
+              >
+                <span className={styles.icon} aria-hidden="true">{card.icon}</span>
+                <h3 className={styles.title}>{card.title}</h3>
+                <p className={styles.desc}>{card.desc}</p>
+                <span className={styles.cta}>
+                  {card.cta}
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                    <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </span>
+              </Link>
+            </div>
           ))}
         </div>
       </div>

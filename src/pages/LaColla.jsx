@@ -22,8 +22,8 @@ export default function LaColla() {
 
       <section className={`${styles.section} section-padding`}>
         <div className="container">
-          <div className={styles.twoCol}>
-            <div>
+          <div className="row g-5 align-items-start">
+            <div className="col-12 col-lg-6">
               <span className="tag">Qui som</span>
               <h2 className="section-title">Una família castellera</h2>
               <p className={styles.body}>
@@ -42,14 +42,16 @@ export default function LaColla() {
                 exhibicions i tallers per apropar els castells a tothom.
               </p>
             </div>
-            <div className={styles.valuesCard}>
-              <h3 className={styles.valuesTitle}>Els nostres valors</h3>
-              {['Esforç i constància', 'Treball en equip', 'Inclusió i diversitat', 'Arrelament al territori', 'Seguretat i tècnica'].map(v => (
-                <div key={v} className={styles.valueItem}>
-                  <span className={styles.valueDot} />
-                  <span>{v}</span>
-                </div>
-              ))}
+            <div className="col-12 col-lg-6">
+              <div className={styles.valuesCard}>
+                <h3 className={styles.valuesTitle}>Els nostres valors</h3>
+                {['Esforç i constància', 'Treball en equip', 'Inclusió i diversitat', 'Arrelament al territori', 'Seguretat i tècnica'].map(v => (
+                  <div key={v} className={styles.valueItem}>
+                    <span className={styles.valueDot} />
+                    <span>{v}</span>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>

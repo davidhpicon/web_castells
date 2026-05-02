@@ -15,38 +15,42 @@ export default function JoinSection() {
   return (
     <section className={`${styles.section} section-padding`}>
       <div className="container">
-        <div className={styles.inner}>
+        <div className="row align-items-center gy-5">
           <div
+            className="col-12 col-lg-6"
             ref={leftRef}
-            className={`${styles.left} reveal-left ${leftInView ? 'is-visible' : ''}`}
           >
-            <span className="tag">Uneix-te</span>
-            <h2 className={styles.title}>
-              Vine a formar<br />
-              part de la <span className={styles.highlight}>família</span>
-            </h2>
-            <p className={styles.subtitle}>
-              No importa l'edat ni l'experiència. Als Castellers de Viladecans
-              t'esperem amb els braços oberts. Junts, construïm molt més que castells.
-            </p>
-            <Link to="/vine-a-fer-castells" className="btn btn-primary">
-              Saber-ne més
-            </Link>
+            <div className={`reveal-left ${leftInView ? 'is-visible' : ''}`}>
+              <span className="tag">Uneix-te</span>
+              <h2 className={styles.title}>
+                Vine a formar<br />
+                part de la <span className={styles.highlight}>família</span>
+              </h2>
+              <p className={styles.subtitle}>
+                No importa l'edat ni l'experiència. Als Castellers de Viladecans
+                t'esperem amb els braços oberts. Junts, construïm molt més que castells.
+              </p>
+              <Link to="/vine-a-fer-castells" className="btn btn-primary">
+                Saber-ne més
+              </Link>
+            </div>
           </div>
 
-          <div ref={rightRef} className={styles.right}>
-            {steps.map((step, i) => (
-              <div
-                key={step.num}
-                className={`${styles.step} reveal ${`stagger-${i + 1}`} ${rightInView ? 'is-visible' : ''}`}
-              >
-                <span className={styles.stepNum}>{step.num}</span>
-                <div>
-                  <h4 className={styles.stepTitle}>{step.title}</h4>
-                  <p className={styles.stepDesc}>{step.desc}</p>
+          <div className="col-12 col-lg-6" ref={rightRef}>
+            <div className={styles.steps}>
+              {steps.map((step, i) => (
+                <div
+                  key={step.num}
+                  className={`${styles.step} reveal stagger-${i + 1} ${rightInView ? 'is-visible' : ''}`}
+                >
+                  <span className={styles.stepNum}>{step.num}</span>
+                  <div>
+                    <h4 className={styles.stepTitle}>{step.title}</h4>
+                    <p className={styles.stepDesc}>{step.desc}</p>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </div>

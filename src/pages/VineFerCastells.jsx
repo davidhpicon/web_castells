@@ -26,16 +26,18 @@ export default function VineFerCastells() {
             <h2 className="section-title">3 passos per ser casteller</h2>
             <p className="section-subtitle">El procés és senzill. No hi ha proves ni selecció. Tothom és benvingut.</p>
           </div>
-          <div className={styles.infoGrid}>
+          <div className="row g-4 justify-content-center">
             {[
               { icon: '👋', title: 'Vine a un assaig', desc: 'Apareix-te qualsevol dimecres o divendres al nostre local. Porta roba còmoda i ganes de riure.' },
               { icon: '🤝', title: 'Coneix la colla', desc: 'Et presentarem als companys, t\'explicarem els fonaments dels castells i trobaràs el teu lloc a la construcció.' },
               { icon: '🏆', title: 'Fes el teu primer castell', desc: 'En poques setmanes participaràs en construccions reals. Una experiència inoblidable que no et pots perdre.' },
             ].map(({ icon, title, desc }) => (
-              <div key={title} className={styles.infoCard}>
-                <span className={styles.infoIcon}>{icon}</span>
-                <h3 className={styles.infoTitle}>{title}</h3>
-                <p className={styles.infoDesc}>{desc}</p>
+              <div key={title} className="col-12 col-md-4">
+                <div className={styles.infoCard}>
+                  <span className={styles.infoIcon}>{icon}</span>
+                  <h3 className={styles.infoTitle}>{title}</h3>
+                  <p className={styles.infoDesc}>{desc}</p>
+                </div>
               </div>
             ))}
           </div>
@@ -44,8 +46,8 @@ export default function VineFerCastells() {
 
       <section className={`${styles.sectionAlt} section-padding`} id="assajos">
         <div className="container">
-          <div className={styles.twoCol}>
-            <div>
+          <div className="row g-5 align-items-start">
+            <div className="col-12 col-lg-6">
               <span className="tag">Assajos</span>
               <h2 className="section-title">Quan i on assagem</h2>
               <p className={styles.body}>
@@ -74,7 +76,7 @@ export default function VineFerCastells() {
                 📍 Local d'assaig de Castellers de Viladecans, Viladecans.
               </p>
             </div>
-            <div>
+            <div className="col-12 col-lg-6">
               <span className="tag">Rols</span>
               <h2 className="section-title">El teu lloc al castell</h2>
               <p className={styles.body}>Cada persona troba el seu paper a la construcció. Tots els rols són igual d'importants.</p>

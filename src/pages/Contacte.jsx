@@ -23,8 +23,8 @@ export default function Contacte() {
 
       <section className={`${styles.section} section-padding`}>
         <div className="container">
-          <div className={styles.twoCol}>
-            <div>
+          <div className="row g-5 align-items-start">
+            <div className="col-12 col-lg-6">
               <span className="tag">Parla amb nosaltres</span>
               <h2 className="section-title" style={{ marginTop: 8 }}>Sempre estem aquí</h2>
               <p className={styles.body}>
@@ -58,7 +58,8 @@ export default function Contacte() {
               </div>
             </div>
 
-            <div className={styles.formCard}>
+            <div className="col-12 col-lg-6">
+              <div className={styles.formCard}>
               {sent ? (
                 <div style={{ textAlign: 'center', padding: '32px 0' }}>
                   <span style={{ fontSize: '3rem', display: 'block', marginBottom: 16 }}>✅</span>
@@ -77,14 +78,18 @@ export default function Contacte() {
                   <h3 className={styles.formTitle}>Envia'ns un missatge</h3>
                   <p className={styles.formSubtitle}>Tots els camps marcats amb * són obligatoris.</p>
                   <form onSubmit={handleSubmit}>
-                    <div className={styles.formRow}>
-                      <div className={styles.formGroup}>
-                        <label className={styles.formLabel} htmlFor="nom">Nom i cognoms *</label>
-                        <input id="nom" name="nom" type="text" required className={styles.formInput} value={form.nom} onChange={handleChange} placeholder="El teu nom" />
+                    <div className="row g-3">
+                      <div className="col-12 col-sm-6">
+                        <div className={styles.formGroup}>
+                          <label className={styles.formLabel} htmlFor="nom">Nom i cognoms *</label>
+                          <input id="nom" name="nom" type="text" required className={styles.formInput} value={form.nom} onChange={handleChange} placeholder="El teu nom" />
+                        </div>
                       </div>
-                      <div className={styles.formGroup}>
-                        <label className={styles.formLabel} htmlFor="email">Correu electrònic *</label>
-                        <input id="email" name="email" type="email" required className={styles.formInput} value={form.email} onChange={handleChange} placeholder="correu@exemple.com" />
+                      <div className="col-12 col-sm-6">
+                        <div className={styles.formGroup}>
+                          <label className={styles.formLabel} htmlFor="email">Correu electrònic *</label>
+                          <input id="email" name="email" type="email" required className={styles.formInput} value={form.email} onChange={handleChange} placeholder="correu@exemple.com" />
+                        </div>
                       </div>
                     </div>
                     <div className={styles.formGroup}>
@@ -112,6 +117,7 @@ export default function Contacte() {
                   </form>
                 </>
               )}
+              </div>
             </div>
           </div>
         </div>

@@ -1,5 +1,5 @@
 import { lazy, Suspense } from 'react'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { HashRouter, Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar/Navbar'
 import Footer from './components/Footer/Footer'
 import ScrollToTop from './components/ScrollToTop'
@@ -21,7 +21,7 @@ function PageLoader() {
 
 export default function App() {
   return (
-    <BrowserRouter basename={import.meta.env.BASE_URL}>
+    <HashRouter>
       <ScrollToTop />
       <Navbar />
       <main>
@@ -37,6 +37,6 @@ export default function App() {
         </Suspense>
       </main>
       <Footer />
-    </BrowserRouter>
+    </HashRouter>
   )
 }

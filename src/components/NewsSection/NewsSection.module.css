@@ -1,6 +1,4 @@
-.section {
-  background: var(--white);
-}
+.section { background: var(--white); }
 
 .header {
   display: flex;
@@ -11,18 +9,8 @@
   flex-wrap: wrap;
 }
 
-.allBtn {
-  flex-shrink: 0;
-}
+.allBtn { flex-shrink: 0; }
 
-/* ── Grid ── */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-}
-
-/* ── Card ── */
 .card {
   border-radius: var(--radius-lg);
   overflow: hidden;
@@ -45,10 +33,7 @@
   justify-content: center;
 }
 
-.cardImgIcon {
-  font-size: 3rem;
-  opacity: 0.9;
-}
+.cardImgIcon { font-size: 3rem; opacity: 0.9; }
 
 .cardBody {
   padding: 24px;
@@ -73,10 +58,7 @@
   letter-spacing: 0.06em;
 }
 
-.cardDate {
-  font-size: 0.75rem;
-  color: var(--text-light);
-}
+.cardDate { font-size: 0.75rem; color: var(--text-light); }
 
 .cardTitle {
   font-family: var(--font-heading);
@@ -104,24 +86,8 @@
   transition: color var(--transition);
 }
 
-.card:hover .readMore {
-  color: var(--green-neon-hover);
-}
-
-/* ── Responsive ── */
-@media (max-width: 960px) {
-  .grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
+.card:hover .readMore { color: var(--green-neon-hover); }
 
 @media (max-width: 600px) {
-  .grid {
-    grid-template-columns: 1fr;
-  }
-
-  .header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
+  .header { flex-direction: column; align-items: flex-start; }
 }
