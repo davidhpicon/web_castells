@@ -8,7 +8,8 @@
       (function() {
         var p = new URLSearchParams(window.location.search).get('p');
         if (p) {
-          window.history.replaceState(null, '', '/web_castells' + p);
+          var base = window.location.pathname.replace(/\/$/, '');
+          window.history.replaceState(null, '', base + p);
         }
       })();
     </script>

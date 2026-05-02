@@ -3,12 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <script>
-    // Redirect SPA routes to index.html for GitHub Pages
-    const path = window.location.pathname.replace('/web_castells', '') || '/';
-    const search = window.location.search;
-    const hash = window.location.hash;
-    const redirectUrl = '/web_castells/?p=' + encodeURIComponent(path + search) + hash;
-    window.location.replace(redirectUrl);
+    // Redirect SPA routes back to index.html for GitHub Pages
+    // Detects base path automatically from the current pathname
+    var segments = window.location.pathname.split('/');
+    var base = '/' + (segments[1] || '');
+    var rest = '/' + segments.slice(2).join('/');
+    var search = window.location.search;
+    var hash = window.location.hash;
+    var redirect = base + '/?p=' + encodeURIComponent(rest + search) + hash;
+    window.location.replace(redirect);
   </script>
 </head>
 <body></body>
