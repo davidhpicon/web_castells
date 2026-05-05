@@ -1,0 +1,98 @@
+.block {
+  background: var(--green-neon);
+  border-radius: var(--radius-lg);
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  height: 100%;
+}
+
+.blockTag {
+  font-family: var(--font-heading);
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.bigValue {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 900;
+  color: #000;
+  text-decoration: none;
+  word-break: break-all;
+  line-height: 1.3;
+  transition: opacity 0.2s;
+}
+
+.bigValue:hover { opacity: 0.7; }
+
+.blockAddr {
+  font-size: 0.95rem;
+  color: #000;
+  line-height: 1.65;
+  margin: 0;
+}
+
+.schedule {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.scheduleRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: var(--radius);
+  padding: 10px 14px;
+}
+
+.scheduleDay {
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: #000;
+}
+
+.scheduleHour {
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #000;
+}
+
+/* ── Form (no card wrapper) ── */
+.form {
+  max-width: 780px;
+  padding-top: 8px;
+}
+
+/* ── Sent confirmation ── */
+.sentMsg {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  max-width: 480px;
+  padding-top: 8px;
+}
+
+.sentMsg span { font-size: 2.5rem; }
+
+.sentMsg h3 {
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--text-dark);
+}
+
+.sentMsg p {
+  font-size: 0.95rem;
+  color: var(--text-mid);
+}

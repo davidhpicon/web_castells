@@ -27,13 +27,20 @@
 }
 
 .cardImg {
-  height: 180px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  height: 200px;
+  overflow: hidden;
+  background: var(--bg-section);
 }
 
-.cardImgIcon { font-size: 3rem; opacity: 0.9; }
+.cardImgPhoto {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.card:hover .cardImgPhoto { transform: scale(1.04); }
 
 .cardBody {
   padding: 24px;

@@ -72,8 +72,6 @@ export default function Hero() {
               />
             </div>
           ))}
-          {/* Dark overlay so text stays readable over any photo */}
-          <div className={styles.slideOverlay} />
         </div>
       )}
 

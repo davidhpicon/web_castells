@@ -36,17 +36,6 @@
   display: block;
 }
 
-/* Permanent dark overlay on top of any photo for text legibility */
-.slideOverlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    160deg,
-    rgba(6, 14, 6, 0.65) 0%,
-    rgba(13, 26, 13, 0.55) 50%,
-    rgba(6, 10, 6, 0.72) 100%
-  );
-}
 
 /* ══════════════════════════════════════
    PARALLAX BACKGROUND LAYERS  (z-index 1, above carousel)
@@ -68,11 +57,9 @@
     linear-gradient(160deg, #0D2E0D 0%, #0D1A0D 60%, #060E06 100%);
 }
 
-/* When photos are present, make gradient transparent so images show through */
+/* When photos are present, no color tint over the image */
 .bgGradientPhoto {
-  background:
-    radial-gradient(ellipse 70% 60% at 80% 40%, rgba(118, 255, 3, 0.1) 0%, transparent 60%),
-    radial-gradient(ellipse 50% 70% at 10% 80%, rgba(27, 94, 32, 0.15) 0%, transparent 60%);
+  background: none;
 }
 
 .bgPattern {

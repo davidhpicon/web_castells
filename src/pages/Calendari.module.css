@@ -1,0 +1,175 @@
+/* ── Calendar widget ── */
+.widget {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+  margin-bottom: 28px;
+}
+
+/* Header */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 28px;
+  background: var(--bg-dark);
+  border-bottom: 1px solid rgba(118, 255, 3, 0.15);
+}
+
+.monthTitle {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 900;
+  color: var(--white);
+  text-transform: capitalize;
+  margin: 0;
+}
+
+.navBtn {
+  background: none;
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 8px;
+  color: var(--white);
+  font-size: 1.5rem;
+  width: 38px;
+  height: 38px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+}
+
+.navBtn:hover {
+  background: var(--green-neon);
+  border-color: var(--green-neon);
+  color: var(--bg-dark);
+}
+
+/* Day name row */
+.dayNames {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  background: var(--bg-section);
+  border-bottom: 1px solid var(--border);
+}
+
+.dayName {
+  text-align: center;
+  padding: 10px 4px;
+  font-family: var(--font-heading);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-light);
+}
+
+/* Day grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 1px;
+  background: var(--border);
+}
+
+.cell {
+  min-height: 80px;
+  background: var(--white);
+  padding: 8px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  cursor: default;
+  transition: filter 0.15s;
+}
+
+.cell:hover { filter: brightness(0.93); }
+
+.cellNum {
+  font-family: var(--font-heading);
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  line-height: 1;
+}
+
+.cellLabel {
+  font-family: var(--font-heading);
+  font-size: 0.6rem;
+  font-weight: 700;
+  line-height: 1.25;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+/* Days outside current month */
+.cellOther {
+  background: var(--bg-section) !important;
+}
+
+.cellOther .cellNum {
+  color: var(--text-light);
+  opacity: 0.35;
+}
+
+/* Today */
+.cellToday {
+  background: var(--bg-dark) !important;
+}
+
+.cellToday .cellNum {
+  color: var(--green-neon) !important;
+}
+
+/* ── Legend ── */
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-mid);
+}
+
+.legendSwatch {
+  width: 14px;
+  height: 14px;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+/* ── Events section ── */
+.eventSection {
+  margin-top: 8px;
+}
+
+.eventSectionTitle {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--text-dark);
+  margin-bottom: 20px;
+}
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+  .header { padding: 16px 16px; }
+  .cell   { min-height: 48px; padding: 5px 4px; }
+  .cellLabel { display: none; }
+  .cellNum { font-size: 0.78rem; }
+}

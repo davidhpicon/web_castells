@@ -3,7 +3,6 @@ import CTACards from '../components/CTACards/CTACards'
 import LazySection from '../components/LazySection'
 import NewsSection from '../components/NewsSection/NewsSection'
 import JoinSection from '../components/JoinSection/JoinSection'
-import Leadership from '../components/Leadership/Leadership'
 
 export default function Home() {
   return (
@@ -15,9 +14,6 @@ export default function Home() {
       </LazySection>
       <LazySection minHeight={420}>
         <JoinSection />
-      </LazySection>
-      <LazySection minHeight={380}>
-        <Leadership />
       </LazySection>
     </>
   )

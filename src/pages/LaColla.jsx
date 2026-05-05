@@ -2,12 +2,10 @@ import styles from './Page.module.css'
 import Leadership from '../components/Leadership/Leadership'
 
 const milestones = [
-  { year: '1994', event: 'Fundació de la colla a Viladecans.' },
-  { year: '2000', event: 'Primera actuació fora de Viladecans.' },
-  { year: '2008', event: 'Primer 3 de 8 carregat i descarregat.' },
-  { year: '2015', event: 'Participació al Concurs de Castells de Tarragona.' },
-  { year: '2020', event: 'Superació dels 200 membres actius.' },
-  { year: '2024', event: '30 anys de la colla. Gran Diada de l\'aniversari.' },
+  { year: '2012', event: 'Fundació de la colla a Viladecans.' },
+  { year: '2013', event: 'Bateig.' },
+  { year: '2017', event: 'bla bla bla' },
+  { year: '2025', event: 'Ens convertim en colla de 7.' },
 ]
 
 export default function LaColla() {
@@ -27,19 +25,25 @@ export default function LaColla() {
               <span className="tag">Qui som</span>
               <h2 className="section-title">Una família castellera</h2>
               <p className={styles.body}>
-                Els Castellers de Viladecans som una entitat cultural sense ànim de lucre
-                nascuda a la dècada dels 90, amb l'objectiu de cultivar i difondre la tradició
-                castellera al municipi de Viladecans i al Baix Llobregat.
+                Els Castellers de Viladecans som la colla castellera de la ciutat de Viladecans,
+                lluïm amb orgull la nostra camisa de color verd fluorescent des de l'any 2012
+                i els nostres màxims castells a dia d'avui són el 4de7a, el 3de7, el 4de7 i el Pde5.
               </p>
               <p className={styles.body}>
-                La nostra colla és un espai d'integració, on persones de totes les edats,
-                orígens i condicions treballen juntes per assolir fites comunes.
-                Els valors que ens guien són l'esforç, la constància, la cooperació i la diversió.
+                El nostre objectiu és la promoció i divulgació del fet casteller, que és Patrimoni
+                Inmaterial de la Humanitat, mitjançant actuacions i diades castelleres, i d'altres
+                activitats, com tallers o assajos públics a Viladecans i rodalies. Som un grup de
+                viladecanencs i viladecanenques entusiasmats per fer castells i per fer més gran
+                la colla castellera de la nostra ciutat!
               </p>
               <p className={styles.body}>
-                Actuem a les festes majors de Viladecans i dels municipis veïns, participem
-                als grans concursos i esdeveniments castelleres de Catalunya, i oferim
-                exhibicions i tallers per apropar els castells a tothom.
+                Actualment som un grup d'una vuitantena de persones que ens reunim per fer assajos
+                els dimecres de 18:30 a 20:30 hores, i els divendres de 20:00 a 23:00 hores al
+                Local de la Colla (C/Agricultura, 37G). Els nostres assajos són oberts, gratuïts
+                i per totes les edats, on tothom hi té cabuda i on tothom hi pot participar.
+                Necessitem gent com TU per seguir creixent i poder fer grans castells, l'únic que
+                s'ha de fer és venir amb moltes ganes, i participar-hi! Vine i descobreix la gran
+                família Fluorescent!
               </p>
             </div>
             <div className="col-12 col-lg-6">
@@ -76,7 +80,29 @@ export default function LaColla() {
         </div>
       </section>
 
-      <Leadership />
+      <Leadership
+        tag="Junta Directiva"
+        title="La Junta Directiva"
+        subtitle="L'equip que gestiona i representa la colla davant de les institucions i entitats."
+        members={[
+          { role: 'President/a',  name: 'Nom Cognom', initials: 'NC' },
+          { role: 'Vicepresident/a', name: 'Nom Cognom', initials: 'NC' },
+          { role: 'Secretari/a',  name: 'Nom Cognom', initials: 'NC' },
+          { role: 'Tresorer/a',   name: 'Nom Cognom', initials: 'NC' },
+        ]}
+      />
+
+      <Leadership
+        tag="Junta Tècnica"
+        title="La Junta Tècnica"
+        subtitle="L'equip tècnic que dirigeix els assajos, decideix les construccions i vetlla per la seguretat."
+        members={[
+          { role: 'Cap de Colla',       name: 'Nom Cognom', initials: 'NC' },
+          { role: 'Cap de Colla Adjunt/a', name: 'Nom Cognom', initials: 'NC' },
+          { role: 'Cap de Canalla',     name: 'Nom Cognom', initials: 'NC' },
+          { role: 'Cap de Música',      name: 'Nom Cognom', initials: 'NC' },
+        ]}
+      />
     </>
   )
 }
