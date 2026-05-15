@@ -85,16 +85,9 @@ export default function Hero() {
       {/* ── Content (unchanged) ── */}
       <div className="container">
         <div className={styles.content}>
-          <span className={`tag ${styles.animTag}`}>Colla Castellera · Viladecans</span>
           <h1 className={`${styles.title} ${styles.animTitle}`}>
-            Tradició, esforç<br />
-            i <span className={styles.highlight}>germanor</span>
+            Castellers de <span className={styles.highlight}>Viladecans</span>
           </h1>
-          <p className={`${styles.subtitle} ${styles.animSubtitle}`}>
-            Som els Castellers de Viladecans. Construïm castells humans
-            amb passió, des del cor del Baix Llobregat.
-            Uneix-te a la nostra família castellera.
-          </p>
           <div className={`${styles.actions} ${styles.animActions}`}>
             <Link to="/vine-a-fer-castells" className="btn btn-primary">
               Vine a fer castells
@@ -105,12 +98,12 @@ export default function Hero() {
           </div>
           <div className={`${styles.stats} ${styles.animStats}`}>
             <div className={styles.stat}>
-              <span className={styles.statNum}>+200</span>
+              <span className={styles.statNum}>+120</span>
               <span className={styles.statLabel}>Castellers</span>
             </div>
             <div className={styles.statDivider} />
             <div className={styles.stat}>
-              <span className={styles.statNum}>+30</span>
+              <span className={styles.statNum}>+13</span>
               <span className={styles.statLabel}>Anys d'història</span>
             </div>
             <div className={styles.statDivider} />

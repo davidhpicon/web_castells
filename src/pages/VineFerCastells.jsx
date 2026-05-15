@@ -5,7 +5,7 @@ const faqs = [
   { q: 'Cal tenir experiència prèvia?', a: 'No, en absolut. Tots hem començat sense saber res. A la colla t\'ensenyem des de zero amb paciència i bon humor.' },
   { q: 'Quina edat mínima hi ha per participar?', a: 'Els infants poden participar des dels 4-5 anys a la canalla. Els adults de qualsevol edat també són benvinguts.' },
   { q: 'Cal estar en forma o tenir força?', a: 'No és imprescindible. Hi ha rols per a totes les constitucions físiques: des dels lleugeres enxanetes fins als robustos de baixos.' },
-  { q: 'Quan i on es fan els assajos?', a: 'Dimecres i divendres al vespre, al nostre local d\'assaig a Viladecans. Consulta el calendari per a horaris exactes.' },
+  { q: 'Quan i on es fan els assajos?', a: 'Dimecres de 16:30 a 20:30 h i divendres de 19:30 a 23:00 h, al nostre local del C/Agricultura 37G de Viladecans.' },
   { q: 'Té cost apuntar-se?', a: 'Hi ha una quota anual simbòlica que cobreix material, assegurança i despeses de la colla. Cap persona es queda fora per raons econòmiques.' },
 ]
 
@@ -56,8 +56,8 @@ export default function VineFerCastells() {
               </p>
               <div style={{ display: 'flex', flexDirection: 'column', gap: 16, marginTop: 28 }}>
                 {[
-                  { dia: 'Dimecres', hora: '20:00 – 22:00 h', tipus: 'Assaig General' },
-                  { dia: 'Divendres', hora: '20:00 – 22:00 h', tipus: 'Assaig Tècnic' },
+                  { dia: 'Dimecres', hora: '16:30 – 20:30 h', tipus: 'Assaig General' },
+                  { dia: 'Divendres', hora: '19:30 – 23:00 h', tipus: 'Assaig General' },
                 ].map(({ dia, hora, tipus }) => (
                   <div key={dia} style={{
                     display: 'flex', alignItems: 'center', gap: 20,
@@ -73,8 +73,18 @@ export default function VineFerCastells() {
                 ))}
               </div>
               <p className={styles.body} style={{ marginTop: 24 }}>
-                📍 Local d'assaig de Castellers de Viladecans, Viladecans.
+                📍 C/Agricultura 37G, 08840 Viladecans
               </p>
+              <iframe
+                title="Local d'assaig Castellers de Viladecans"
+                src="https://maps.google.com/maps?q=Carrer+de+l'Agricultura+37G,+08840+Viladecans&output=embed&hl=ca"
+                width="100%"
+                height="280"
+                style={{ border: 0, borderRadius: 'var(--radius)', display: 'block', marginTop: 8 }}
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
             </div>
             <div className="col-12 col-lg-6">
               <span className="tag">Rols</span>

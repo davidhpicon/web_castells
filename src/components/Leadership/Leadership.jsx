@@ -3,12 +3,12 @@ import styles from './Leadership.module.css'
 
 const staggerClasses = ['stagger-1', 'stagger-2', 'stagger-3', 'stagger-4', 'stagger-1', 'stagger-2', 'stagger-3', 'stagger-4']
 
-export default function Leadership({ tag, title, subtitle, members }) {
+export default function Leadership({ id, tag, title, subtitle, members }) {
   const [headerRef, headerInView] = useInView()
   const [gridRef, gridInView]     = useInView({ threshold: 0.1 })
 
   return (
-    <section className={`${styles.section} section-padding`}>
+    <section id={id} className={`${styles.section} section-padding`} style={{ scrollMarginTop: 'var(--navbar-height)' }}>
       <div className="container">
         <div
           ref={headerRef}
