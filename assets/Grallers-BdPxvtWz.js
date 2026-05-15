@@ -1,0 +1,1 @@
+import{j as a}from"./index-CYXpqCAc.js";function s(){return a.jsx(a.Fragment,{children:a.jsx("div",{className:"page-hero",children:a.jsxs("div",{className:"container",children:[a.jsxs("h1",{children:["Els ",a.jsx("span",{children:"Grallers"})]}),a.jsx("p",{children:"La música que acompanya cada castell, cada diada i cada moment de la colla."})]})})})}export{s as default};
