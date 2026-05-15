@@ -57,9 +57,15 @@
     linear-gradient(160deg, #0D2E0D 0%, #0D1A0D 60%, #060E06 100%);
 }
 
-/* When photos are present, no color tint over the image */
+/* When photos are present, dark gradient overlay so text stays readable */
 .bgGradientPhoto {
-  background: none;
+  background:
+    linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.65) 0%,
+      rgba(0, 0, 0, 0.35) 50%,
+      rgba(0, 0, 0, 0.1)  100%
+    );
 }
 
 .bgPattern {
@@ -345,6 +351,23 @@
 
   .scrollHint {
     display: none;
+  }
+
+  /* On portrait mobile, show top-center of landscape photos
+     so the castells/people stay in frame */
+  .slideImg {
+    object-position: top center;
+  }
+
+  /* On mobile, gradient goes top-to-bottom so text at top stays readable */
+  .bgGradientPhoto {
+    background:
+      linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.6) 0%,
+        rgba(0, 0, 0, 0.25) 50%,
+        rgba(0, 0, 0, 0.55) 100%
+      );
   }
 }
 
