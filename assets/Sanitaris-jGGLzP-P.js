@@ -1,0 +1,1 @@
+import{j as s}from"./index-D0peT6X_.js";function a(){return s.jsx(s.Fragment,{children:s.jsx("div",{className:"page-hero",children:s.jsxs("div",{className:"container",children:[s.jsxs("h1",{children:["Els nostres ",s.jsx("span",{children:"Sanitaris"})]}),s.jsx("p",{children:"L'equip que vetlla per la salut i la seguretat de tots els castellers."})]})})})}export{a as default};
