@@ -1,0 +1,1 @@
+import{j as a}from"./index-DXQzUYsc.js";function s(){return a.jsx(a.Fragment,{children:a.jsx("div",{className:"page-hero",children:a.jsxs("div",{className:"container",children:[a.jsx("h1",{children:a.jsx("span",{children:"Equitat"})}),a.jsx("p",{children:"El nostre compromís amb la igualtat, la inclusió i la diversitat dins la colla."})]})})})}export{s as default};
