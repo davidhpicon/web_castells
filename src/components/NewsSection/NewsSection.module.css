@@ -1,12 +1,8 @@
 .section { background: var(--white); }
 
 .header {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
   gap: 24px;
   margin-bottom: 48px;
-  flex-wrap: wrap;
 }
 
 .allBtn { flex-shrink: 0; }
@@ -95,6 +91,3 @@
 
 .card:hover .readMore { color: var(--green-neon-hover); }
 
-@media (max-width: 600px) {
-  .header { flex-direction: column; align-items: flex-start; }
-}

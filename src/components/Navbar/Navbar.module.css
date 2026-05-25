@@ -129,7 +129,6 @@
 
 /* ── Burger ── */
 .burger {
-  display: none;
   flex-direction: column;
   gap: 5px;
   padding: 8px;
@@ -168,9 +167,8 @@
 }
 
 /* ── Mobile ── */
-@media (max-width: 900px) {
+@media (max-width: 991.98px) {
   .burger {
-    display: flex;
     position: relative;
     z-index: 1001;
   }

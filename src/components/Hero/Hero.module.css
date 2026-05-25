@@ -329,10 +329,6 @@
     gap: 20px;
   }
 
-  .statDivider {
-    display: none;
-  }
-
   .controls {
     bottom: 44px;
     gap: 12px;
@@ -343,9 +339,6 @@
     height: 36px;
   }
 
-  .scrollHint {
-    display: none;
-  }
 }
 
 /* Honor reduced-motion */

@@ -121,7 +121,7 @@ export default function Navbar() {
           </nav>
 
           <button
-            className={`${styles.burger} ${menuOpen ? styles.burgerOpen : ''}`}
+            className={`d-flex d-lg-none ${styles.burger} ${menuOpen ? styles.burgerOpen : ''}`}
             aria-label="Obrir menú"
             onClick={() => setMenuOpen(o => !o)}
           >

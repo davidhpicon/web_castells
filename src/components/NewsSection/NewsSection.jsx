@@ -41,7 +41,7 @@ export default function NewsSection({ limit = 3 }) {
       <div className="container">
         <div
           ref={headerRef}
-          className={`${styles.header} reveal ${headerInView ? 'is-visible' : ''}`}
+          className={`d-flex flex-column flex-sm-row align-items-start align-items-sm-end justify-content-between flex-wrap reveal ${headerInView ? 'is-visible' : ''} ${styles.header}`}
         >
           <div>
             <span className="tag">Actualitat</span>

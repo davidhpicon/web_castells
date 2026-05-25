@@ -101,12 +101,12 @@ export default function Hero() {
               <span className={styles.statNum}>+120</span>
               <span className={styles.statLabel}>Castellers</span>
             </div>
-            <div className={styles.statDivider} />
+            <div className={`${styles.statDivider} d-none d-md-flex`} />
             <div className={styles.stat}>
               <span className={styles.statNum}>+13</span>
               <span className={styles.statLabel}>Anys d'història</span>
             </div>
-            <div className={styles.statDivider} />
+            <div className={`${styles.statDivider} d-none d-md-flex`} />
             <div className={styles.stat}>
               <span className={styles.statNum}>Viladecans</span>
               <span className={styles.statLabel}>Baix Llobregat</span>
@@ -158,7 +158,7 @@ export default function Hero() {
         <div className={styles.progressBar} key={current} />
       )}
 
-      <div className={styles.scrollHint} aria-hidden="true">
+      <div className={`${styles.scrollHint} d-none d-md-block`} aria-hidden="true">
         <span />
       </div>
     </section>
